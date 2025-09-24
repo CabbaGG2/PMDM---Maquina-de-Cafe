@@ -1,3 +1,5 @@
+package main.kotlin
+
 sealed class CoffeeMachineState {
     class Idle : CoffeeMachineState() {
         init {
@@ -8,4 +10,3 @@ sealed class CoffeeMachineState {
     data class ServingCoffee(val brand: String) : CoffeeMachineState()
     data class Error(val message: String) : CoffeeMachineState()
 }
-

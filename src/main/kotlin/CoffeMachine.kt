@@ -1,3 +1,5 @@
+package main.kotlin
+
 object CoffeeMachine {
 
     var estadoIdle = CoffeeMachineState.Idle()
