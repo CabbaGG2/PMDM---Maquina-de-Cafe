@@ -30,4 +30,11 @@ class CoffeeMachineTest {
         CoffeeMachine.clean()
         assertTrue(CoffeeMachine.currentState is CoffeeMachineState.Idle)
     }
+
+    @Test
+    fun `cuando tratas de hacer cafe dos veces deberia lanzar un mensaje que ya hay cafe echo`(){
+        CoffeeMachine.solicitarPago(2)
+        CoffeeMachine.solicitarPago(2)
+        assertTrue(CoffeeMachine.currentState is CoffeeMachineState.ServingCoffee)
+    }
 }
