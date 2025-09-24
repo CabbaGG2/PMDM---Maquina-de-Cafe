@@ -5,6 +5,8 @@ import main.kotlin.CoffeeMachineState
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.DisplayName
+
 class CoffeeMachineTest {
 
     @BeforeEach
@@ -39,7 +41,8 @@ class CoffeeMachineTest {
     }
 
     @Test
-    fun `si tratas de pedir otro cafe deberia arrojar un mensaje diciendo que hay un cafe servido que porfavor lo recojas y procede a limpiar`() {
+    @DisplayName ("Si tratas de pedir otro cafe deberia arrojar un mensaje diciendo que hay un cafe servido que porfavor lo recojas y procede a limpiar")
+    fun cafeServidoNoLimpia() {
         CoffeeMachine.solicitarPago(2)
         CoffeeMachine.solicitarPago(2)
         assertTrue(CoffeeMachine.currentState is CoffeeMachineState.Idle)
