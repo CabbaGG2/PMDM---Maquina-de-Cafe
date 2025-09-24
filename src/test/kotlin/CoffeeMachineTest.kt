@@ -37,4 +37,11 @@ class CoffeeMachineTest {
         CoffeeMachine.solicitarPago(2)
         assertTrue(CoffeeMachine.currentState is CoffeeMachineState.ServingCoffee)
     }
+
+    @Test
+    fun `si tratas de pedir otro cafe deberia arrojar un mensaje diciendo que hay un cafe servido que porfavor lo recojas y procede a limpiar`() {
+        CoffeeMachine.solicitarPago(2)
+        CoffeeMachine.solicitarPago(2)
+        assertTrue(CoffeeMachine.currentState is CoffeeMachineState.Idle)
+    }
 }

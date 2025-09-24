@@ -22,6 +22,7 @@ object CoffeeMachine {
             }
             is CoffeeMachineState.ServingCoffee -> {
                 println("Ya hay café servido. Por favor, toma tu café.")
+                clean()
             }
             is CoffeeMachineState.Error -> {
                 println("La máquina tiene un error: ${(currentState as CoffeeMachineState.Error).message}")
