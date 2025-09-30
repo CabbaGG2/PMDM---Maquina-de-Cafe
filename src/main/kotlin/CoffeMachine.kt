@@ -1,4 +1,4 @@
-package main.kotlin
+/**package main.kotlin
 
 object CoffeeMachine {
 
@@ -46,3 +46,4 @@ object CoffeeMachine {
         }
     }
 }
+ */
