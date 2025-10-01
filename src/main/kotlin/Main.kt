@@ -4,7 +4,8 @@ fun main() {
 
         // punto de partida
         println("--- Encendiendo la máquina ---")
-        StateMachine.solicitarPago(1)
+        StateMachine.solicitarPago(0.5)
+        StateMachine.solicitarPago(1.0)
         StateMachine.cleanMachine()
 
 

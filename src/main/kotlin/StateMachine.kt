@@ -34,7 +34,7 @@ object StateMachine {
         currentState.onEnter(this)
     }
 
-    fun solicitarPago(amount: Int) {
+    fun solicitarPago(amount: Double) {
         if (currentState is CoffeeMachineState.Idle) {
             if (amount >= 1) {
                 println("Pago recibido: $amount euro(s). Preparando café...")
